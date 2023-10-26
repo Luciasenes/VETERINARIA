@@ -1,0 +1,240 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  color: whitesmoke;
+}
+html {
+  font-size: 80.5%;
+  font-family: "Nunito", sans-serif;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+  text-transform: uppercase;
+ text-align: center;
+}
+
+h1 {
+  font-size: 26px;
+  text-transform: capitalize;
+  text-shadow:
+    -1px -1px 1px #aaa,
+    0px 2px 1px rgba(0, 0, 0, 0.5),
+    2px 2px 2px rgba(0, 0, 0, 0.7),
+    0px 0px 3px rgba(0, 0, 0, 0.4);
+}
+h2{
+  color: #2f9f37;
+}
+.gallery-item{
+background-color: #2f9f37;
+
+}
+p{
+  color: #2f9f37;
+}
+.main-page {
+  background-size: cover;
+  height: 100vh;
+}
+.header-container {
+  display: flex;
+  flex-direction: column;
+}
+.header-title {
+  display: flex;
+  flex-direction: row;
+  height: 10rem;
+  width: 100%;
+  place-content: center;
+  place-items: center;
+  background-color: #90e491;
+}
+.header-container img {
+  height: 3rem;
+  width: 3rem;
+  margin-left: 1rem;
+}
+
+.title {
+  font-weight: bold;
+  font-size: 3rem;
+  color: #f8f8f8;
+}
+.nav-wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  border-bottom: #2e2c35 0.05rem;
+}
+
+.nav-item {
+  display: block;
+  list-style: none;
+  text-decoration: none;
+  padding: 14px 16px;
+  font-size: 1.5rem;
+  text-align: center;
+  color: #ffffffea;
+}
+
+.resume-container {
+  display: flex;
+  height: 25%;
+  margin-top: 15vh;
+  border: #f8f8f8 solid 0.2rem;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  clip-path: polygon(100% 100%, 100% 0, 100% 100%, 0% 100%);
+  animation: show 2s cubic-bezier(0.86, 0.13, 0.55, 1.03) forwards;
+}
+
+.resume-text {
+  font-size: 28px;
+  text-align: center;
+  color: #271a70;
+  max-width: 25rem;
+  text-transform:capitalize ;
+  text-shadow:
+  -1px -1px 1px #aaa,
+  0px 2px 1px rgba(0, 0, 0, 0.5),
+  2px 2px 2px rgba(0, 0, 0, 0.7),
+  0px 0px 3px rgba(0, 0, 0, 0.4);
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: center;
+  padding: 0 2rem;
+}
+#home {
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.section-title {
+  margin-top: 1.5rem;
+  color: green;
+  text-decoration-line: underline;
+}
+
+#image-interactive {
+  width: 25rem;
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+.gallery-item {
+  margin: 10 18;
+}
+
+.gallery-item img {
+  width: 250px;
+}
+#contact {
+  background-color:#65c09a;
+  justify-content: center;
+  color: #f8f8f8;
+}
+
+.form-container {
+  width: 70vw;
+  height: 30vh;
+  margin: 70px 18px;
+}
+.form-container {
+  display: flex;
+  justify-content: center;
+  align-self: center;
+}
+.form-container input {
+  display: block;
+}
+.input-contact {
+  background-color: transparent;
+  color: #f8f8f8;
+  width: 70vw;
+  border-color:  transparent transparent  gray transparent;
+  
+  margin: 2rem;
+}
+.button-contact {
+  background-color: #333;
+  color: #f8f8f8;
+  height: 4rem;
+  display: block;
+  width: 20rem;
+  margin: auto;
+}
+footer {
+  width: 100%;
+background-color: #2f9f37;
+}
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  place-content: center;
+}
+
+.social-button {
+  margin: 1rem;
+  }
+.social-button:hover {
+  transform: scale(1.5);
+}
+@keyframes show {
+  to {
+    opacity: 1;
+    clip-path: polygon(100% 100%, 100% 0, 0 0, 0% 100%);
+  }
+}
+
+.carrousel{
+  width:90%;
+  max-width: 120em;
+  padding:2em;
+
+  overflow: hidden;
+}
+.carrousel .grande{
+  width: 200%;
+
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+
+  padding:2em;
+
+
+  transition: all .5s ease;
+  transform: translateX(0%);
+}
+.carrousel .img{
+  width: calc( 100% / 5  - 2em);
+  min-height: 10vh;
+
+}
+.carrousel .puntos{
+  width:100%;
+  margin:1em 0 0;
+  padding:.4em;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  background-color: #90e491;
+}
+.carrousel .punto{
+  width:  2em;
+  height: 2em;
+  margin: 1em 1em 0;
+
+}
+.carrousel .punto.activo{
+  background-color: rgb(102, 219, 67);
+}
