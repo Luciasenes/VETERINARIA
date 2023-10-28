@@ -1,20 +1,18 @@
-'use strict'
 
-const grande    = document.querySelector('.grande')
-const punto     = document.querySelectorAll('.punto')
+const slidesContainer = document.getElementById("slides-container");
+const slide = document.querySelector(".slide");
+const prevButton = document.getElementById("slide-arrow-prev");
+const nextButton = document.getElementById("slide-arrow-next");
 
-punto.forEach( ( cadaPunto , i )=> {
-    punto[i].addEventListener('click',()=>{
 
-        let posicition  = i
-        let operacion = posicition * -50
+nextButton.addEventListener("click", () => {
+  const slideWidth = slide.clientWidth;
+  slidesContainer.scrollLeft += slideWidth;
 
-        grande.style.transform = `translateX(${ operacion }%)`
+});
 
-        punto.forEach( ( cadaPunto ,      i )=>{
-            punto[i].classList.remove('activo')
-        })
-        punto[i].classList.add('activo')
+prevButton.addEventListener("click", () => {
+  const slideWidth = slide.clientWidth;
+  slidesContainer.scrollLeft -= slideWidth;
 
-    })
-})
+});
