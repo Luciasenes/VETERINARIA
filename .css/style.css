@@ -342,7 +342,6 @@ footer .amigas{
   background-color: #5e7094;
 }
 
-
 .menu__arrow{
   transform: var(--transform);
   transition: transform .3s;
